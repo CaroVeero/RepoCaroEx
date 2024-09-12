@@ -88,7 +88,10 @@
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex" style="align-items: center;">
-  
+      <form id="logout-form" action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-warning">Cerrar sesion</button>
+        </form>
       </div>
 
 
@@ -98,9 +101,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column nav-legacy" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
-            <!-- deje este espacio para el boton cerrar sesio-->
-            
+          <li class="nav-item">          
           </li>
           <li class="nav-item">
             <a href="{{ route('users.index') }}" class="nav-link">
